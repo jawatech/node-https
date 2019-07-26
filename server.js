@@ -9,7 +9,7 @@ const fs = require('fs');
 app.get('/', (req, res) => {
      res.send('Hello World');
 });
-app.use(express.static(__dirname + '/public'));//设置静态文件目录
+app.use(express.static(__dirname + '/sketch'));
 // we will pass our 'app' to 'https' server
 https.createServer({
     key: fs.readFileSync('./key.pem'),
